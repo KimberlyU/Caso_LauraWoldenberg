@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura Woldenberg - Ficha Emprendedora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .ficha {
+            width: 8.5in;
+            height: 11in;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Elementos decorativos geométricos */
+        .shape-circle {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background: #FF6B35;
+            border-radius: 50%;
+            top: -60px;
+            right: -60px;
+            opacity: 0.9;
+        }
+        
+        .shape-triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 173px solid #FFC857;
+            bottom: -80px;
+            left: -50px;
+            opacity: 0.8;
+        }
+        
+        .shape-square {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: #4ECDC4;
+            bottom: 100px;
+            right: -30px;
+            opacity: 0.7;
+            transform: rotate(15deg);
+        }
+        
+        /* Contenido */
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header {
+            margin-bottom: 30px;
+            border-bottom: 4px solid #FF6B35;
+            padding-bottom: 20px;
+        }
+        
+        .nombre {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2C3E50;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .rol {
+            font-size: 18px;
+            font-weight: 400;
+            color: #FF6B35;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #4ECDC4;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title::before {
+            content: '';
+            width: 20px;
+            height: 3px;
+            background: #4ECDC4;
+            margin-right: 10px;
+        }
+        
+        .proyectos {
+            font-size: 13px;
+            color: #2C3E50;
+            line-height: 1.6;
+        }
+        
+        .proyecto-item {
+            background: #F8F9FA;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-left: 3px solid #FFC857;
+            font-weight: 400;
+        }
+        
+        .proposito-text {
+            font-size: 13px;
+            color: #2C3E50;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        
+        .valor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .valor-card {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8556 100%);
+            padding: 18px;
+            border-radius: 8px;
+            color: white;
+        }
+        
+        .valor-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        
+        .valor-text {
+            font-size: 11px;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+        
+        .rasgos-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .rasgo-item {
+            background: white;
+            border: 2px solid #4ECDC4;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            color: #2C3E50;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+        
+        .rasgo-item strong {
+            color: #4ECDC4;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 12px;
+        }
+        
+        .footer-tag {
+            position: absolute;
+            bottom: 30px;
+            right: 50px;
+            background: #2C3E50;
+            color: white;
+            padding: 8px 20px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            .ficha {
+                box-shadow: none;
+                width: 8.5in;
+                height: 11in;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ficha">
+        <!-- Formas geométricas decorativas -->
+        <div class="shape-circle"></div>
+        <div class="shape-triangle"></div>
+        <div class="shape-square"></div>
+        
+        <div class="content">
+            <!-- Header -->
+            <div class="header">
+                <div class="nombre">Laura Woldenberg</div>
+                <div class="rol">Productora Ejecutiva / Empresaria Creativa</div>
+            </div>
+            
+            <!-- Proyectos destacados -->
+            <div class="section">
+                <div class="section-title">Proyectos Destacados</div>
+                <div class="proyectos">
+                    <div class="proyecto-item"><strong>The Three Deaths of Marisela Escobedo</strong> - Netflix</div>
+                    <div class="proyecto-item"><strong>La Dama del Silencio: El Caso de la Mataviejitas</strong> - Netflix</div>
+                </div>
+            </div>
+            
+            <!-- Propósito -->
+            <div class="section">
+                <div class="section-title">Propósito</div>
+                <p class="proposito-text">
+                    Laura Woldenberg busca visibilizar historias con voz propia de México y América Latina —especialmente aquellas poco contadas— a través de producciones que conectan lo cultural, lo social y lo internacional. Esta visión le permite trascender lo puramente comercial y aportar sentido al contenido que genera.
+                </p>
+            </div>
+            
+            <!-- Creación y Capitalización de Valor -->
+            <div class="section">
+                <div class="section-title">Modelo de Valor</div>
+                <div class="valor-grid">
+                    <div class="valor-card">
+                        <div class="valor-title">Creación de Valor</div>
+                        <div class="valor-text">
+                            • Selección estratégica de temas con relevancia social y cultural<br>
+                            • Producción ejecutiva que articula talento local con plataformas globales<br>
+                            • Construcción de marca propia con credibilidad
+                        </div>
+                    </div>
+                    <div class="valor-card">
+                        <div class="valor-title">Capitalización</div>
+                        <div class="valor-text">
+                            • Acuerdos de distribución internacional (Netflix)<br>
+                            • Reputación como productora de confianza<br>
+                            • Escala creativa: lo local con alcance global
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Rasgos emprendedores -->
+            <div class="section">
+                <div class="section-title">Mentalidad Emprendedora</div>
+                <div class="rasgos-list">
+                    <div class="rasgo-item">
+                        <strong>Visión Estratégica</strong>
+                        Posiciona Latinoamérica en el mercado global de contenidos
+                    </div>
+                    <div class="rasgo-item">
+                        <strong>Tolerancia al Riesgo</strong>
+                        Aborda temáticas sensibles con valor editorial sobre lo comercial
+                    </div>
+                    <div class="rasgo-item">
+                        <strong>Orientación al Impacto</strong>
+                        Proyectos que generan reflexión y conversación social
+                    </div>
+                    <div class="rasgo-item">
+                        <strong>Habilidades de Puente</strong>
+                        Articula alianzas entre plataformas, productoras y talentos diversos
+                    </div>
+                    <div class="rasgo-item">
+                        <strong>Escalabilidad Creativa</strong>
+                        Modelo híbrido que monetiza, distribuye y amplifica con calidad
+                    </div>
+                    <div class="rasgo-item">
+                        <strong>Sensibilidad Cultural</strong>
+                        Historias arraigadas localmente con matriz global
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
